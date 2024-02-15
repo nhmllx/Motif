@@ -13,6 +13,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Button;
 
 import com.example.motif_application.databinding.ActivityMainBinding;
 
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     //push test
+    Button tap1;
+    Button tap2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
