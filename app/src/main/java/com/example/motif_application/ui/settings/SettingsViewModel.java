@@ -1,16 +1,16 @@
-package com.example.motif_application.ui.home;
+package com.example.motif_application.ui.settings;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class SettingsViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public SettingsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Main menu page");
+        mText.setValue("Settings Page");
     }
 
     public LiveData<String> getText() {

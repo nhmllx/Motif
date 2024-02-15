@@ -1,4 +1,4 @@
-package com.example.motif_application.ui.home;
+package com.example.motif_application.ui.menu;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,20 +12,20 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.motif_application.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
+public class MainMenuFragment extends Fragment {
 
     private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        MainMenuViewModel mainMenuViewModel =
+                new ViewModelProvider(this).get(MainMenuViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        mainMenuViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

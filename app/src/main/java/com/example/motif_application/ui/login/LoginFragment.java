@@ -1,4 +1,4 @@
-package com.example.motif_application.ui.gallery;
+package com.example.motif_application.ui.login;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,23 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.motif_application.databinding.FragmentGalleryBinding;
+import com.example.motif_application.databinding.FragmentSlideshowBinding;
 
-public class GalleryFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+public class LoginFragment extends Fragment {
+
+    private FragmentSlideshowBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        LoginViewModel slideshowViewModel =
+                new ViewModelProvider(this).get(LoginViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textSlideshow;
+        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

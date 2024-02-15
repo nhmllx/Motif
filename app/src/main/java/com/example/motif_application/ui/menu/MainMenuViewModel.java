@@ -1,16 +1,16 @@
-package com.example.motif_application.ui.slideshow;
+package com.example.motif_application.ui.menu;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class MainMenuViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public MainMenuViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("Main menu page");
     }
 
     public LiveData<String> getText() {
